@@ -156,8 +156,7 @@ export default function Home() {
 
             {/* CDDG */}
             <a
-              href="#contact-cddg"
-              onClick={(e) => { e.preventDefault(); setContactOpen(true); }}
+              href="/apps/cddg"
               className="card-hover"
               style={{ display: "flex", flexDirection: "column", background: "#0E1418", borderRadius: 22, padding: 32, minHeight: 380, color: "#fff", position: "relative", overflow: "hidden", border: "1px solid #16202a", cursor: "pointer" }}
             >
@@ -248,7 +247,7 @@ export default function Home() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 15, fontWeight: 500 }}>
                   <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" className="footer-link">Scoobs Live</a>
                   <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" className="footer-link">Vizalyze</a>
-                  <button onClick={() => setContactOpen(true)} className="footer-link" style={{ background: "none", border: "none", cursor: "pointer", color: "inherit", fontSize: 15, fontWeight: 500, fontFamily: "inherit", textAlign: "left", padding: 0 }}>CDDG</button>
+                  <a href="/apps/cddg" className="footer-link">CDDG</a>
                 </div>
               </div>
               <div>
@@ -256,7 +255,7 @@ export default function Home() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 15, fontWeight: 500 }}>
                   <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" className="footer-link">scoobslive.com ↗</a>
                   <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" className="footer-link">vizalyze.app ↗</a>
-                  <button onClick={() => setContactOpen(true)} className="footer-link" style={{ background: "none", border: "none", cursor: "pointer", color: "#9AA1A9", fontSize: 15, fontFamily: "inherit", textAlign: "left", padding: 0 }}>CDDG · private beta</button>
+                  <a href="/apps/cddg" className="footer-link" style={{ color: "#34D6B4" }}>CDDG · private beta ↗</a>
                 </div>
               </div>
               <div>

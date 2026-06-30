@@ -70,6 +70,18 @@ const jsonLd = {
         description: "Measurement data analysis and visualization",
       },
     },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "SoftwareApplication",
+        name: "CDDG",
+        url: "https://www.dimeapps.com/apps/cddg",
+        operatingSystem: "Android",
+        applicationCategory: "AutomotiveApplication",
+        description:
+          "Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.",
+      },
+    },
   ],
 };
 

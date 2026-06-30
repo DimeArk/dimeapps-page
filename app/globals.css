@@ -58,6 +58,40 @@ a { text-decoration: none; color: inherit; }
 .section-pad { padding-left: 40px; padding-right: 40px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 
+/* ── CDDG page animations ── */
+@keyframes cddg-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes cddg-pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes cddg-pulse-ring {
+  0% { opacity: 0.35; transform: scale(1); }
+  100% { opacity: 0; transform: scale(3.2); }
+}
+@keyframes cddg-live-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; }
+}
+@keyframes cddg-value-tick {
+  0%, 100% { color: #E7EAEE; }
+  6% { color: #34D6B4; }
+  22% { color: #E7EAEE; }
+}
+@keyframes cddg-soc-fill {
+  from { width: 0%; }
+  to { width: 78%; }
+}
+@keyframes cddg-rde-urban {
+  from { stroke-dasharray: 0 390; }
+  to { stroke-dasharray: 132.5 257.5; }
+}
+@keyframes cddg-rde-rural {
+  from { stroke-dasharray: 0 390; }
+  to { stroke-dasharray: 128.6 261.4; }
+}
+
 @media (max-width: 768px) {
   .nav-links-desktop { display: none !important; }
   .nav-hamburger {
