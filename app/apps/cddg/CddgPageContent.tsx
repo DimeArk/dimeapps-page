@@ -538,6 +538,66 @@ export default function CddgPageContent() {
           </div>
         </header>
 
+        {/* ── SCREENSHOTS ── */}
+        <section className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 10, paddingBottom: 60 }}>
+          <div style={{ marginBottom: 36 }}>
+            <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#34D6B4", marginBottom: 12 }}>SEE IT IN ACTION</div>
+            <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(24px,2.8vw,36px)", letterSpacing: "-0.02em", color: "#fff" }}>
+              Real app. Real screens.
+            </h2>
+          </div>
+
+          {/* Horizontal scroll gallery */}
+          <div
+            style={{
+              display: "flex",
+              gap: 20,
+              overflowX: "auto",
+              paddingBottom: 16,
+              scrollSnapType: "x mandatory",
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
+            {[
+              { file: "drive-cycle.png",    label: "Drive Cycle",       desc: "WLTP Extra High phase active — real-time speed vs target" },
+              { file: "rde-monitoring.png", label: "RDE Monitoring",    desc: "Live urban/rural/motorway split with Euro 6d validity check" },
+              { file: "obd-live-data.png",  label: "OBD Live Data",     desc: "24 PIDs at 10 Hz via OBDLink MX+ Bluetooth adapter" },
+              { file: "ev-reess.png",       label: "REESS Monitor",     desc: "78% SOC, pack current, regen energy in CD mode" },
+              { file: "test-report.png",    label: "Test Complete",     desc: "One-tap PDF export with full audit trail" },
+            ].map(({ file, label, desc }) => (
+              <div
+                key={file}
+                style={{ flexShrink: 0, scrollSnapAlign: "start", width: 210 }}
+              >
+                <div
+                  style={{
+                    borderRadius: 22,
+                    overflow: "hidden",
+                    border: "1px solid rgba(52,214,180,0.2)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(52,214,180,0.08)",
+                  }}
+                >
+                  <Image
+                    src={`/assets/cddg/${file}`}
+                    alt={label}
+                    width={412}
+                    height={892}
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                </div>
+                <div style={{ marginTop: 14, paddingLeft: 4 }}>
+                  <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: 15, color: "#fff", marginBottom: 4 }}>{label}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "#3A7A6A", lineHeight: 1.4 }}>{desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ marginTop: 20, fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "#2A5040", textAlign: "center" }}>
+            ← SCROLL TO SEE ALL SCREENS →
+          </p>
+        </section>
+
         {/* ── WHY CDDG ── */}
         <section className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 20, paddingBottom: 60 }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
