@@ -155,10 +155,9 @@ export default function Home() {
             </a>
 
             {/* CDDG */}
-            <a
-              href="/apps/cddg"
+            <div
               className="card-hover"
-              style={{ display: "flex", flexDirection: "column", background: "#0E1418", borderRadius: 22, padding: 32, minHeight: 380, color: "#fff", position: "relative", overflow: "hidden", border: "1px solid #16202a", cursor: "pointer" }}
+              style={{ display: "flex", flexDirection: "column", background: "#0E1418", borderRadius: 22, padding: 32, minHeight: 380, color: "#fff", position: "relative", overflow: "hidden", border: "1px solid #16202a" }}
             >
               <div style={{ position: "absolute", top: -40, right: -40, width: 180, height: 180, borderRadius: "50%", background: "radial-gradient(circle,rgba(40,210,180,0.3),transparent 70%)" }} />
               <Image src="/assets/cddg_logo.png" alt="CDDG logo" width={96} height={96} style={{ position: "absolute", top: 14, right: 14, width: 96, height: 96, objectFit: "contain", filter: "drop-shadow(0 6px 18px rgba(40,210,180,0.4))" }} />
@@ -170,10 +169,13 @@ export default function Home() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Audit reports</span>
               </div>
               <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#34D6B4" }}>Request access →</span>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#2E5A52", letterSpacing: "0.04em" }}>PRIVATE BETA</span>
+                <button
+                  onClick={() => setContactOpen(true)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#34D6B4", background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", padding: 0 }}
+                >Send message →</button>
+                <a href="/apps/cddg" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#2E5A52", letterSpacing: "0.04em" }}>LEARN MORE ↗</a>
               </div>
-            </a>
+            </div>
 
           </div>
         </section>
