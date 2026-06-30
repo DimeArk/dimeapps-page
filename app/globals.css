@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #0B0C0F;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #E7EAEE;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+::selection { background: #ED7D31; color: #fff; }
+
+.card-hover { transition: transform 0.2s ease; }
+.card-hover:hover { transform: translateY(-6px); }
+.belief-hover { transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+.belief-hover:hover {
+  border-color: rgba(237,125,49,0.55);
+  background: rgba(237,125,49,0.07);
+  transform: translateX(4px);
+}
+.nav-link { color: #9AA1A9; transition: color 0.15s; }
+.nav-link:hover { color: #fff; }
+.footer-link { transition: color 0.15s; }
+.footer-link:hover { color: #ED7D31; }
