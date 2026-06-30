@@ -38,7 +38,7 @@ export default function Home() {
         </nav>
 
         {/* Hero */}
-        <header style={{ maxWidth: 1180, margin: "0 auto", padding: "120px 40px 90px" }}>
+        <header style={{ maxWidth: 1180, margin: "0 auto", padding: "100px 40px 60px" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "7px 15px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.06em", color: "#ED7D31", marginBottom: 34 }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#ED7D31", display: "inline-block" }} />
             INDEPENDENT SOFTWARE STUDIO
@@ -46,12 +46,20 @@ export default function Home() {
           <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "clamp(44px,7vw,86px)", lineHeight: 0.98, letterSpacing: "-0.03em", color: "#fff", maxWidth: "14ch" }}>
             Small, sharp apps that do one thing well.
           </h1>
-          <p style={{ marginTop: 30, fontSize: "clamp(18px,2.2vw,22px)", lineHeight: 1.5, color: "#9AA1A9", maxWidth: "56ch" }}>
-            Dimeapps is an independent studio building focused tools — from live meeting transcription to measurement-data analysis to homologation-grade vehicle testing. Three products, one obsession with craft.
+          <p style={{ marginTop: 30, fontSize: "clamp(18px,2.2vw,22px)", lineHeight: 1.5, color: "#9AA1A9", maxWidth: "52ch" }}>
+            Live meeting transcription, engineering data analysis, and homologation-grade vehicle testing — each free to start, built to respect your data.
           </p>
           <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <a href="#apps" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>See the apps →</a>
-            <a href="#studio" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#E7EAEE", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>What we believe</a>
+            <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Try Scoobs Live — free →</a>
+            <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#E7EAEE", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Download Vizalyze →</a>
+          </div>
+          <div style={{ marginTop: 44, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
+            {["3 live products", "70+ languages", "Privacy-first", "Free to start"].map((label, i, arr) => (
+              <span key={label} style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: "#6B7280", letterSpacing: "0.04em" }}>{label.toUpperCase()}</span>
+                {i < arr.length - 1 && <span style={{ width: 3, height: 3, borderRadius: "50%", background: "#3A3F48", display: "inline-block" }} />}
+              </span>
+            ))}
           </div>
         </header>
 
@@ -81,7 +89,10 @@ export default function Home() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #2A2A2E", borderRadius: 999, color: "#C9CDD3" }}>Live transcripts</span>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #2A2A2E", borderRadius: 999, color: "#C9CDD3" }}>Interview AI</span>
               </div>
-              <div style={{ marginTop: 20, display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#84E15D" }}>Explore Scoobs Live →</div>
+              <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#84E15D" }}>Try free →</span>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A6A52", letterSpacing: "0.04em" }}>FREE · No signup needed</span>
+              </div>
             </a>
 
             {/* Vizalyze */}
@@ -102,7 +113,10 @@ export default function Home() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>Charts &amp; reports</span>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>CAN · MDF · CSV</span>
               </div>
-              <div style={{ marginTop: 20, display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#B79BFF" }}>Explore Vizalyze →</div>
+              <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#B79BFF" }}>Download free →</span>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A5470", letterSpacing: "0.04em" }}>FREE · No credit card</span>
+              </div>
             </a>
 
             {/* CDDG */}
@@ -121,7 +135,10 @@ export default function Home() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Dyno · RDE · EV</span>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Audit reports</span>
               </div>
-              <div style={{ marginTop: 20, display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#34D6B4" }}>Private beta — contact us →</div>
+              <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#34D6B4" }}>Request access →</span>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#2E5A52", letterSpacing: "0.04em" }}>PRIVATE BETA</span>
+              </div>
             </a>
 
           </div>
