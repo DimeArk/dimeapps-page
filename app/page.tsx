@@ -7,20 +7,43 @@ import ContactModal from "@/components/ContactModal";
 
 export default function Home() {
   const [contactOpen, setContactOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
 
+      {/* Mobile full-screen menu */}
+      <div className={`nav-mobile-menu${menuOpen ? " open" : ""}`} role="dialog" aria-modal="true">
+        <button
+          onClick={closeMenu}
+          style={{ position: "absolute", top: 20, right: 20, background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, width: 40, height: 40, color: "#fff", cursor: "pointer", fontSize: 20, display: "flex", alignItems: "center", justifyContent: "center" }}
+          aria-label="Close menu"
+        >✕</button>
+        <a href="#apps" className="nav-mobile-link" onClick={closeMenu}>Apps</a>
+        <a href="#studio" className="nav-mobile-link" onClick={closeMenu}>Studio</a>
+        <button className="nav-mobile-link" onClick={() => { closeMenu(); setContactOpen(true); }}>Contact</button>
+        <a
+          href="https://scoobslive.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={closeMenu}
+          style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "12px 24px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 18 }}
+        >Try Scoobs Live →</a>
+      </div>
+
       <div style={{ minHeight: "100vh", width: "100%", overflowX: "hidden" }}>
 
         {/* Nav */}
-        <nav style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", background: "rgba(11,12,15,0.82)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+        <nav style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", background: "rgba(11,12,15,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11 }}>
             <Image src="/assets/dimeapps_logo.svg" alt="Dimeapps" width={30} height={30} style={{ height: 30, width: "auto" }} />
             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 20, letterSpacing: "-0.02em", color: "#fff" }}>dimeapps</span>
           </a>
-          <div style={{ display: "flex", alignItems: "center", gap: 28, fontSize: 15, fontWeight: 500 }}>
+          {/* Desktop links */}
+          <div className="nav-links-desktop" style={{ alignItems: "center", gap: 28, fontSize: 15, fontWeight: 500 }}>
             <a href="#apps" className="nav-link">Apps</a>
             <a href="#studio" className="nav-link">Studio</a>
             <button
@@ -35,10 +58,22 @@ export default function Home() {
               style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "9px 17px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 15 }}
             >Explore apps</a>
           </div>
+          {/* Hamburger */}
+          <button
+            className="nav-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+              <rect width="18" height="2" rx="1" fill="currentColor"/>
+              <rect y="6" width="18" height="2" rx="1" fill="currentColor"/>
+              <rect y="12" width="12" height="2" rx="1" fill="currentColor"/>
+            </svg>
+          </button>
         </nav>
 
         {/* Hero */}
-        <header style={{ maxWidth: 1180, margin: "0 auto", padding: "100px 40px 60px" }}>
+        <header className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 80, paddingBottom: 60 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "7px 15px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.06em", color: "#ED7D31", marginBottom: 34 }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#ED7D31", display: "inline-block" }} />
             INDEPENDENT SOFTWARE STUDIO
@@ -49,7 +84,7 @@ export default function Home() {
           <p style={{ marginTop: 30, fontSize: "clamp(18px,2.2vw,22px)", lineHeight: 1.5, color: "#9AA1A9", maxWidth: "52ch" }}>
             Live meeting transcription, engineering data analysis, and homologation-grade vehicle testing — each free to start, built to respect your data.
           </p>
-          <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
+          <div className="hero-ctas" style={{ marginTop: 40 }}>
             <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Try Scoobs Live — free →</a>
             <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#E7EAEE", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Download Vizalyze →</a>
           </div>
@@ -64,7 +99,7 @@ export default function Home() {
         </header>
 
         {/* Apps */}
-        <section id="apps" style={{ maxWidth: 1180, margin: "0 auto", padding: "30px 40px 30px" }}>
+        <section id="apps" className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 30, paddingBottom: 30 }}>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 20, flexWrap: "wrap", marginBottom: 34 }}>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "clamp(28px,3.6vw,42px)", letterSpacing: "-0.02em", color: "#fff" }}>The apps</h2>
             <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "#8A94A0" }}>03 / live products</span>
@@ -145,7 +180,7 @@ export default function Home() {
         </section>
 
         {/* Studio / What we believe */}
-        <section id="studio" style={{ maxWidth: 1180, margin: "0 auto", padding: "80px 40px 40px" }}>
+        <section id="studio" className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 60, paddingBottom: 40 }}>
           <div style={{ background: "linear-gradient(155deg,#191D26 0%,#0E1014 62%)", borderRadius: 28, padding: "clamp(34px,4.6vw,60px)", color: "#fff", position: "relative", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)" }}>
             <div style={{ position: "absolute", top: -130, right: -90, width: 440, height: 440, borderRadius: "50%", background: "radial-gradient(circle,rgba(237,125,49,0.2),transparent 65%)", pointerEvents: "none" }} />
             <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,0.05) 1px,transparent 1px)", backgroundSize: "22px 22px", opacity: 0.45, pointerEvents: "none" }} />
@@ -187,7 +222,7 @@ export default function Home() {
         </section>
 
         {/* Contact CTA */}
-        <section style={{ maxWidth: 1180, margin: "0 auto", padding: "60px 40px 40px", textAlign: "center" }}>
+        <section className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 60, paddingBottom: 40, textAlign: "center" }}>
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.08em", color: "#ED7D31", marginBottom: 14 }}>GET IN TOUCH</div>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "clamp(26px,3.2vw,38px)", letterSpacing: "-0.025em", color: "#fff", marginBottom: 12 }}>Questions, feedback, or just want to say hi?</h2>
           <p style={{ fontSize: 16, color: "#9AA1A9", marginBottom: 28 }}>We&apos;re a small team and we read every message.</p>
@@ -198,7 +233,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer style={{ maxWidth: 1180, margin: "0 auto", padding: "70px 40px 60px" }}>
+        <footer className="section-pad" style={{ maxWidth: 1180, margin: "0 auto", paddingTop: 60, paddingBottom: 50 }}>
           <div style={{ display: "flex", justifyContent: "space-between", gap: 30, flexWrap: "wrap", alignItems: "flex-start", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 40 }}>
             <div style={{ maxWidth: 320 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 14 }}>
