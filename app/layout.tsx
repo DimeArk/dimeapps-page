@@ -40,50 +40,66 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Dimeapps",
-  url: "https://www.dimeapps.com",
-  logo: "https://www.dimeapps.com/assets/dimeapps_logo.svg",
-  description: "An independent studio building small, sharp apps that do one thing well.",
-  sameAs: [],
-  foundingDate: "2024",
-  makesOffer: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "SoftwareApplication",
-        name: "Scoobs Live",
-        url: "https://scoobslive.com",
-        applicationCategory: "ProductivityApplication",
-        description: "Live meeting transcription app",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Dimeapps",
+    url: "https://www.dimeapps.com",
+    description: "An independent studio building small, sharp apps that do one thing well.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.dimeapps.com/?q={search_term_string}",
       },
+      "query-input": "required name=search_term_string",
     },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "SoftwareApplication",
-        name: "Vizalyze",
-        url: "https://vizalyze.app",
-        applicationCategory: "BusinessApplication",
-        description: "Measurement data analysis and visualization",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Dimeapps",
+    url: "https://www.dimeapps.com",
+    logo: "https://www.dimeapps.com/assets/dimeapps_logo.svg",
+    description: "An independent studio building small, sharp apps that do one thing well.",
+    foundingDate: "2024",
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Scoobs Live",
+          url: "https://scoobslive.com",
+          applicationCategory: "ProductivityApplication",
+          description: "Live meeting transcription app",
+        },
       },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "SoftwareApplication",
-        name: "CDDG",
-        url: "https://www.dimeapps.com/apps/cddg",
-        operatingSystem: "Android",
-        applicationCategory: "AutomotiveApplication",
-        description:
-          "Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.",
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Vizalyze",
+          url: "https://vizalyze.app",
+          applicationCategory: "BusinessApplication",
+          description: "Measurement data analysis and visualization",
+        },
       },
-    },
-  ],
-};
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "CDDG",
+          url: "https://www.dimeapps.com/apps/cddg",
+          operatingSystem: "Android",
+          applicationCategory: "AutomotiveApplication",
+          description:
+            "Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.",
+        },
+      },
+    ],
+  },
+];
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -95,6 +111,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Explicit preconnect for faster font loading = positive Core Web Vitals signal */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
