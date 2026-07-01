@@ -108,10 +108,7 @@ export default function HomePageContent() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 22 }}>
 
             {/* Scoobs Live */}
-            <a
-              href="https://scoobslive.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <div
               className="card-hover"
               style={{ display: "flex", flexDirection: "column", background: "#0C0C0E", borderRadius: 22, padding: 32, minHeight: 380, color: "#fff", position: "relative", overflow: "hidden", border: "1px solid #18181b" }}
             >
@@ -125,16 +122,13 @@ export default function HomePageContent() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #2A2A2E", borderRadius: 999, color: "#C9CDD3" }}>Interview AI</span>
               </div>
               <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#84E15D" }}>Try free →</span>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A6A52", letterSpacing: "0.04em" }}>FREE · No signup needed</span>
+                <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#84E15D" }}>Try free →</a>
+                <a href="/apps/scoobs-live" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A6A52", letterSpacing: "0.04em" }}>LEARN MORE ↗</a>
               </div>
-            </a>
+            </div>
 
             {/* Vizalyze */}
-            <a
-              href="https://vizalyze.app"
-              target="_blank"
-              rel="noopener noreferrer"
+            <div
               className="card-hover"
               style={{ display: "flex", flexDirection: "column", background: "#0A0A11", borderRadius: 22, padding: 32, minHeight: 380, color: "#fff", position: "relative", overflow: "hidden", border: "1px solid #1A1726" }}
             >
@@ -149,10 +143,10 @@ export default function HomePageContent() {
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>CAN · MDF · CSV</span>
               </div>
               <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#B79BFF" }}>Download free →</span>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A5470", letterSpacing: "0.04em" }}>FREE · No credit card</span>
+                <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 600, fontSize: 15, color: "#B79BFF" }}>Download free →</a>
+                <a href="/apps/vizalyze" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#5A5470", letterSpacing: "0.04em" }}>LEARN MORE ↗</a>
               </div>
-            </a>
+            </div>
 
             {/* CDDG */}
             <div

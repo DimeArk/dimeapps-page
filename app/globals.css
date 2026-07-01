@@ -91,6 +91,14 @@ a { text-decoration: none; color: inherit; }
   from { stroke-dasharray: 0 390; }
   to { stroke-dasharray: 128.6 261.4; }
 }
+@keyframes scoobs-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; }
+}
+@keyframes scoobs-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (max-width: 768px) {
   .nav-links-desktop { display: none !important; }
