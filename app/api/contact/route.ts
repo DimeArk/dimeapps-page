@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
     // If BREVO_API_KEY is set, use Brevo to send the email
     const BREVO_KEY = process.env.BREVO_API_KEY;
-    const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "mails2arka@gmail.com";
+    const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "apps.dime@gmail.com";
 
     if (BREVO_KEY) {
       const res = await fetch("https://api.brevo.com/v3/smtp/email", {
