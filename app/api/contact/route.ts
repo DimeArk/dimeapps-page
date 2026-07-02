@@ -8,29 +8,30 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    // If RESEND_API_KEY is set, use Resend to send the email
-    const RESEND_KEY = process.env.RESEND_API_KEY;
+    // If BREVO_API_KEY is set, use Brevo to send the email
+    const BREVO_KEY = process.env.BREVO_API_KEY;
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "mails2arka@gmail.com";
 
-    if (RESEND_KEY) {
-      const res = await fetch("https://api.resend.com/emails", {
+    if (BREVO_KEY) {
+      const res = await fetch("https://api.brevo.com/v3/smtp/email", {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${RESEND_KEY}`,
+          "api-key": BREVO_KEY,
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify({
-          from: "Dimeapps Contact <contact@dimeapps.com>",
-          to: [TO_EMAIL],
-          reply_to: email,
+          sender: { name: "Dime Apps", email: "apps.dime@gmail.com" },
+          to: [{ email: TO_EMAIL }],
+          replyTo: { email, name },
           subject: `New message from ${name}`,
-          text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-          html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><br><p>${message.replace(/\n/g, "<br>")}</p>`,
+          textContent: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+          htmlContent: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><br><p>${message.replace(/\n/g, "<br>")}</p>`,
         }),
       });
 
       if (!res.ok) {
-        console.error("Resend error:", await res.text());
+        console.error("Brevo error:", await res.text());
         return NextResponse.json({ error: "Email send failed" }, { status: 500 });
       }
     } else {
