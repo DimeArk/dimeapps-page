@@ -36,7 +36,7 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
 
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: "0.08em", color: "#ED7D31", marginBottom: 12 }}>GET IN TOUCH</div>
         <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 28, letterSpacing: "-0.02em", color: "#fff", marginBottom: 8 }}>Say hello</h2>
-        <p style={{ fontSize: 15, color: "#9AA1A9", marginBottom: 28 }}>Feedback, questions, partnerships — we read everything.</p>
+        <p style={{ fontSize: 15, color: "#9AA1A9", marginBottom: 28 }}>Feedback, questions, partnerships - we read everything.</p>
 
         {status === "sent" ? (
           <div style={{ textAlign: "center", padding: "40px 0" }}>

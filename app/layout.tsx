@@ -9,18 +9,18 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", 
 
 export const metadata: Metadata = {
   title: {
-    default: "Dimeapps — Small, sharp apps that do one thing well",
+    default: "Dimeapps - Small, sharp apps that do one thing well",
     template: "%s | Dimeapps",
   },
   description:
-    "Dimeapps is an independent studio building focused tools — from live meeting transcription (Scoobs Live) to measurement-data analysis (Vizalyze) to homologation-grade vehicle testing (CDDG).",
+    "Dimeapps is an independent studio building focused tools - from live meeting transcription (Scoobs Live) to professional measurement-data analysis (Vizalyze) to Android vehicle test workflows (CDDG).",
   metadataBase: new URL("https://www.dimeapps.com"),
   alternates: { canonical: "https://www.dimeapps.com" },
   keywords: ["Dimeapps", "Scoobs Live", "Vizalyze", "CDDG", "indie apps", "productivity apps", "meeting transcription", "data analysis"],
   authors: [{ name: "Dimeapps" }],
   creator: "Dimeapps",
   openGraph: {
-    title: "Dimeapps — Small, sharp apps that do one thing well",
+    title: "Dimeapps - Small, sharp apps that do one thing well",
     description: "An independent studio building focused tools. Each app does one thing, and does it well.",
     url: "https://www.dimeapps.com",
     siteName: "Dimeapps",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dimeapps — Small, sharp apps that do one thing well",
+    title: "Dimeapps - Small, sharp apps that do one thing well",
     description: "An independent studio building focused tools. Each app does one thing, and does it well.",
     creator: "@dimeapps",
   },
@@ -82,7 +82,7 @@ const jsonLd = [
           name: "Vizalyze",
           url: "https://vizalyze.app",
           applicationCategory: "BusinessApplication",
-          description: "Measurement data analysis and visualization",
+          description: "Local-first measurement data analysis with 31+ formats, Axy AI, signal processing, CAN/LIN decoding, batch reporting, and live monitoring.",
         },
       },
       {
@@ -94,7 +94,7 @@ const jsonLd = [
           operatingSystem: "Android",
           applicationCategory: "AutomotiveApplication",
           description:
-            "Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.",
+            "Android vehicle test workflows for drive cycles, RDE setup, EV/hybrid work, OBD/GPS logging, validation, replay, and audit exports.",
         },
       },
     ],

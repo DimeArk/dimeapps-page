@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CddgPageContent from "./CddgPageContent";
 
 export const metadata: Metadata = {
-  title: "CDDG — Homologation Vehicle Testing App for Android",
+  title: "CDDG - Vehicle Test Workflow App for Android",
   description:
-    "CDDG is the only mobile-native app for professional automotive homologation. Drive cycle execution (WLTP, RDE, FTP-75), OBD-II logging, EV/hybrid testing, and certification-ready PDF reports — all from an Android device. Demo trials available.",
+    "CDDG is an Android workflow app for vehicle test execution: drive cycles, RDE setup, EV/hybrid workflows, OBD/GPS logging, replay, validation, and review-ready audit records. Demo trials available.",
   keywords: [
     "CDDG",
     "vehicle homologation software",
@@ -12,26 +12,26 @@ export const metadata: Metadata = {
     "drive cycle testing Android",
     "WLTP test software mobile",
     "automotive OBD logging app",
-    "vehicle certification software",
+    "vehicle test workflow software",
     "emission testing app Android",
     "EV range testing app",
-    "type approval software",
+    "pre-compliance workflow software",
     "automotive test Android app",
     "Real Driving Emissions app",
     "FTP-75 drive cycle app",
     "NEDC testing software",
-    "Euro 6d compliance testing",
+    "Euro 6d workflow validation",
     "homologation app",
-    "automotive homologation Android",
+    "automotive test workflow Android",
     "OBD-II logging app",
     "PEMS data logging mobile",
     "dimeapps CDDG",
   ],
   alternates: { canonical: "https://www.dimeapps.com/apps/cddg" },
   openGraph: {
-    title: "CDDG — Professional Vehicle Homologation on Android",
+    title: "CDDG - Vehicle Test Workflows on Android",
     description:
-      "Drive cycles, RDE compliance, EV/hybrid testing, OBD logging and audit-ready reports — in your pocket. The only mobile-native homologation platform.",
+      "Drive cycles, RDE setup, EV/hybrid workflows, OBD/GPS logging, validation, replay, and audit exports on Android.",
     url: "https://www.dimeapps.com/apps/cddg",
     siteName: "Dimeapps",
     type: "website",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CDDG — Professional Vehicle Homologation on Android",
+    title: "CDDG - Vehicle Test Workflows on Android",
     description:
-      "Drive cycles, RDE compliance, EV/hybrid testing, OBD logging and audit-ready reports — in your pocket.",
+      "Drive cycles, RDE setup, EV/hybrid workflows, OBD/GPS logging, validation, replay, and audit exports on Android.",
     creator: "@dimeapps",
   },
 };
@@ -54,7 +54,7 @@ const jsonLd = {
   applicationCategory: "AutomotiveApplication",
   url: "https://www.dimeapps.com/apps/cddg",
   description:
-    "Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.",
+    "Vehicle test workflow software for Android - drive cycles, RDE setup, EV/hybrid workflows, OBD/GPS logging, validation, replay, and audit exports.",
   author: { "@type": "Organization", name: "Dimeapps", url: "https://www.dimeapps.com" },
   offers: {
     "@type": "Offer",
@@ -65,10 +65,10 @@ const jsonLd = {
   },
   featureList: [
     "WLTP Class 1, 2 and 3 drive cycle execution",
-    "RDE (Real Driving Emissions) Euro 6d and Euro 7 compliance monitoring",
+    "RDE (Real Driving Emissions) Euro 6d and Euro 7 workflow monitoring",
     "EV and hybrid REESS/SOC monitoring",
     "OBD-II and J1939 logging at up to 10 Hz",
-    "Audit-ready PDF report export",
+    "Review-ready audit records and raw export paths",
     "GPS-tagged test data",
     "FTP-75, NEDC, ARTEMIS, custom cycles",
   ],

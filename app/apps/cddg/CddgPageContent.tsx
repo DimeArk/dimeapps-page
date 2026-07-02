@@ -55,7 +55,7 @@ function DriveCycleVisual() {
         ].map(({ x, label }) => (
           <text key={label} x={x} y="9" fill="rgba(52,214,180,0.28)" fontSize="7.5" textAnchor="middle" fontFamily="JetBrains Mono">{label}</text>
         ))}
-        {/* Target speed — teal dashed */}
+        {/* Target speed - teal dashed */}
         <polyline
           points="36,148 48,148 55,128 64,104 73,98 84,98 92,116 98,136 104,148 109,148 119,116 130,98 139,116 144,148 149,148 160,108 170,77 184,77 194,98 202,148 207,148 218,98 230,54 253,54 264,78 274,126 280,148 286,148 298,88 312,54 326,63 336,148 341,148 357,78 370,20 400,20 413,47 425,78 434,103 440,113"
           fill="none"
@@ -64,7 +64,7 @@ function DriveCycleVisual() {
           strokeDasharray="6,4"
           opacity="0.65"
         />
-        {/* Actual speed — white animated draw */}
+        {/* Actual speed - white animated draw */}
         <polyline
           points="36,148 48,148 55,130 64,102 73,100 84,96 92,118 98,134 104,148 109,148 119,114 130,100 139,118 144,148 149,148 160,106 170,79 184,75 194,100 202,148 207,148 218,96 230,56 253,52 264,80 274,124 280,148 286,148 298,86 312,52 326,65 336,148 341,148 357,76 370,22 400,22 413,45 425,80 434,101 440,116"
           fill="none"
@@ -82,7 +82,7 @@ function DriveCycleVisual() {
             animationFillMode: "forwards",
           }}
         />
-        {/* Current position — pulsing dot */}
+        {/* Current position - pulsing dot */}
         <circle
           cx="440" cy="116" r="5" fill="#34D6B4"
           style={{ animationName: "cddg-pulse-dot", animationDuration: "1.6s", animationTimingFunction: "ease-in-out", animationIterationCount: "infinite" }}
@@ -106,7 +106,7 @@ function DriveCycleVisual() {
         {[
           { label: "TARGET", value: "118 km/h", color: "#34D6B4" },
           { label: "ACTUAL", value: "116 km/h", color: "#E7EAEE" },
-          { label: "DEVIATION", value: "−1.7%", color: "#84E15D" },
+          { label: "DEVIATION", value: "-1.7%", color: "#84E15D" },
           { label: "DISTANCE", value: "23.2 km", color: "#5A8A7A" },
         ].map(({ label, value, color }) => (
           <div key={label}>
@@ -200,7 +200,7 @@ function RdeVisual() {
           ))}
           <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(52,214,180,0.1)" }}>
             {[
-              ["TEMP", "14–29°C ✓"],
+              ["TEMP", "14-29°C ✓"],
               ["DURATION", "68 min ✓"],
               ["COLD START", "INCLUDED ✓"],
               ["ALTITUDE Δ", "< 100 m ✓"],
@@ -264,7 +264,7 @@ function EvHybridVisual() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
         {[
           { label: "PACK VOLTAGE", value: "396.2 V" },
-          { label: "PACK CURRENT", value: "−42.8 A" },
+          { label: "PACK CURRENT", value: "-42.8 A" },
           { label: "REGEN ENERGY", value: "4.82 kWh" },
           { label: "ENERGY USED", value: "18.3 kWh" },
           { label: "EV RANGE EST.", value: "141 km" },
@@ -333,7 +333,7 @@ function ObdLoggerVisual() {
   );
 }
 
-function AuditReportVisual() {
+function AuditRecordVisual() {
   return (
     <div
       style={{
@@ -348,8 +348,8 @@ function AuditReportVisual() {
       <div style={{ borderBottom: "2px solid rgba(52,214,180,0.28)", paddingBottom: 14, marginBottom: 16 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div>
-            <div style={{ fontSize: 14, fontWeight: 700, color: "#34D6B4", fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "-0.01em" }}>CDDG TEST REPORT</div>
-            <div style={{ fontSize: 10, color: "#2A5A46", marginTop: 3 }}>WLTP Class 3 · Homologation Grade · v2.4</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: "#34D6B4", fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "-0.01em" }}>CDDG AUDIT RECORD</div>
+            <div style={{ fontSize: 10, color: "#2A5A46", marginTop: 3 }}>WLTP Class 3 · Workflow Evidence · v2.4</div>
           </div>
           <div style={{ fontSize: 9, color: "#2A5040", textAlign: "right" }}>
             <div>REF: CDDG-2026-0047</div>
@@ -379,7 +379,7 @@ function AuditReportVisual() {
 
       {/* Mini speed chart */}
       <div style={{ background: "rgba(52,214,180,0.04)", border: "1px solid rgba(52,214,180,0.09)", borderRadius: 8, padding: "10px 12px", marginBottom: 14 }}>
-        <div style={{ fontSize: 8.5, color: "#1E4A36", marginBottom: 6 }}>SPEED TRACE — TARGET vs MEASURED</div>
+        <div style={{ fontSize: 8.5, color: "#1E4A36", marginBottom: 6 }}>SPEED TRACE - TARGET vs MEASURED</div>
         <svg viewBox="0 0 280 38" style={{ width: "100%", height: 38 }}>
           <polyline
             points="0,36 6,36 10,28 16,20 22,16 32,16 38,22 44,32 48,36 52,36 58,24 66,16 72,22 76,36 80,36 88,20 98,12 110,12 116,20 122,36 126,36 134,16 144,6 160,6 166,16 176,30 180,36 186,36 194,12 206,2 224,2 232,8 240,20 244,36 248,36 256,10 268,0 280,2"
@@ -513,7 +513,7 @@ export default function CddgPageContent() {
                 <span style={{ color: "#34D6B4" }}>Now on Android.</span>
               </h1>
               <p style={{ marginTop: 28, fontSize: "clamp(16px,1.9vw,20px)", lineHeight: 1.58, color: "#8A9EA0", maxWidth: "46ch" }}>
-                CDDG is the only mobile-native app for homologation-grade vehicle testing — drive cycles, RDE compliance, EV/hybrid protocols, OBD logging, and certification-ready reports. No laptop required.
+                CDDG is an Android workflow app for vehicle test execution - drive cycles, RDE setup, EV/hybrid workflows, OBD/GPS logging, replay, validation, and review-ready audit records. No laptop required.
               </p>
               <div className="hero-ctas" style={{ marginTop: 36 }}>
                 <button
@@ -526,7 +526,7 @@ export default function CddgPageContent() {
                 >Enquire About Licensing</button>
               </div>
               <div style={{ marginTop: 40, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-                {["Android 8+", "OBD-II / BLE", "WLTP · RDE · FTP-75", "Audit-Ready PDF"].map((label, i, arr) => (
+                {["Android 8+", "OBD-II / BLE", "WLTP · RDE · FTP-75", "Audit records"].map((label, i, arr) => (
                   <span key={label} style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
                     <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: "#3A6A5A", letterSpacing: "0.04em" }}>{label}</span>
                     {i < arr.length - 1 && <span style={{ width: 3, height: 3, borderRadius: "50%", background: "#1A3A30", display: "inline-block" }} />}
@@ -559,11 +559,11 @@ export default function CddgPageContent() {
             }}
           >
             {[
-              { file: "drive-cycle.png",    label: "Drive Cycle",       desc: "WLTP Extra High phase active — real-time speed vs target" },
+              { file: "drive-cycle.png",    label: "Drive Cycle",       desc: "WLTP Extra High phase active - real-time speed vs target" },
               { file: "rde-monitoring.png", label: "RDE Monitoring",    desc: "Live urban/rural/motorway split with Euro 6d validity check" },
               { file: "obd-live-data.png",  label: "OBD Live Data",     desc: "24 PIDs at 10 Hz via OBDLink MX+ Bluetooth adapter" },
               { file: "ev-reess.png",       label: "REESS Monitor",     desc: "78% SOC, pack current, regen energy in CD mode" },
-              { file: "test-report.png",    label: "Test Complete",     desc: "One-tap PDF export with full audit trail" },
+              { file: "test-report.png",    label: "Test Complete",     desc: "Review-ready session record with raw export paths" },
             ].map(({ file, label, desc }) => (
               <div
                 key={file}
@@ -603,7 +603,7 @@ export default function CddgPageContent() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#34D6B4", marginBottom: 14 }}>WHY CDDG IS DIFFERENT</div>
             <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(26px,3vw,40px)", letterSpacing: "-0.025em", color: "#fff", maxWidth: "34ch", margin: "0 auto" }}>
-              The first mobile-native homologation platform. There is nothing else like it.
+              A mobile-native workflow for vehicle test execution, traceability, and review-ready records.
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(256px,1fr))", gap: 20 }}>
@@ -615,13 +615,13 @@ export default function CddgPageContent() {
               },
               {
                 icon: "📋",
-                title: "Audit-ready from the first drive",
-                desc: "Every data point is timestamped, GPS-tagged, and validated. Export certification-grade PDF reports in a single tap.",
+                title: "Review-ready from the first drive",
+                desc: "Every run can keep timestamps, GPS traces, validation status, session metadata, and exportable records for lab or authority review.",
               },
               {
                 icon: "⚡",
                 title: "Every protocol. One app.",
-                desc: "WLTP, RDE, FTP-75, NEDC, EV/hybrid, and custom cycles — all included. No extra modules, no annual add-ons.",
+                desc: "WLTP, RDE, FTP-75, NEDC, EV/hybrid, and custom cycles are organized into one Android workflow with traceable setup and logging.",
               },
             ].map(({ icon, title, desc }) => (
               <div
@@ -656,7 +656,7 @@ export default function CddgPageContent() {
         {/* ── FEATURE 02: RDE ── */}
         <FeatureRow
           tag="FEATURE 02 · RDE COMPLIANCE MONITORING"
-          title="Real Driving Emissions tracking — live, as you drive"
+          title="Real Driving Emissions tracking - live, as you drive"
           desc="CDDG monitors your urban/rural/motorway distribution in real time and alerts you when it risks invalidating the trip. Moving Average Window analysis runs continuously, and all Euro 6d/7 boundary conditions are checked at journey's end."
           bullets={[
             "Live urban / rural / motorway phase split",
@@ -664,7 +664,7 @@ export default function CddgPageContent() {
             "Dynamic and extended conditional monitoring",
             "Cold-start inclusion verification",
             "Altitude, temperature and humidity logging",
-            "Post-trip validity report with annotated flags",
+            "Post-trip validity record with annotated flags",
           ]}
           visual={<RdeVisual />}
           reverse
@@ -673,8 +673,8 @@ export default function CddgPageContent() {
         {/* ── FEATURE 03: EV / HYBRID ── */}
         <FeatureRow
           tag="FEATURE 03 · EV & HYBRID PROTOCOLS"
-          title="EV and hybrid support built in — not bolted on"
-          desc="CDDG's EV/hybrid module handles REESS monitoring, SOC correction, charge-depleting and charge-sustaining mode differentiation, and regenerative braking efficiency accounting — out of the box, for both OVC-HEV and NOVC-HEV vehicles."
+          title="EV and hybrid support built in - not bolted on"
+          desc="CDDG's EV/hybrid module handles REESS monitoring, SOC correction, charge-depleting and charge-sustaining mode differentiation, and regenerative braking efficiency accounting - out of the box, for both OVC-HEV and NOVC-HEV vehicles."
           bullets={[
             "State of Charge (SOC) monitoring and correction",
             "REESS voltage, current and temperature logging",
@@ -689,12 +689,12 @@ export default function CddgPageContent() {
         {/* ── FEATURE 04: OBD LOGGING ── */}
         <FeatureRow
           tag="FEATURE 04 · OBD-II & J1939 DATA LOGGING"
-          title="100+ PIDs at up to 10 Hz — on any BT or WiFi adapter"
+          title="100+ PIDs at up to 10 Hz - on any BT or WiFi adapter"
           desc="Connect any ELM327-compatible Bluetooth or WiFi OBD adapter and start logging immediately. CDDG supports the full standard PID library plus custom PIDs in hex, with configurable sample rates, units and scaling factors per channel."
           bullets={[
             "Bluetooth (Classic & BLE) and WiFi OBD adapters",
             "100+ standard Mode 01/02/09 PIDs",
-            "Custom PID support — Mode 22 and raw hex input",
+            "Custom PID support - Mode 22 and raw hex input",
             "SAE J1939 for heavy-duty and commercial vehicles",
             "Configurable sample rate up to 10 Hz per channel",
             "Real-time display with rolling min/max/average overlay",
@@ -703,20 +703,20 @@ export default function CddgPageContent() {
           reverse
         />
 
-        {/* ── FEATURE 05: REPORTS ── */}
+        {/* FEATURE 05: AUDIT RECORDS */}
         <FeatureRow
-          tag="FEATURE 05 · AUDIT-READY REPORTS"
-          title="One tap from completed drive to certification-ready PDF"
-          desc="CDDG generates structured PDF test reports that include all test metadata, GPS traces, OBD channel data, speed trace comparisons, validity flag summaries and mass-per-km calculations — formatted to meet certification submission requirements."
+          tag="FEATURE 05 · AUDIT RECORDS"
+          title="From completed drive to review-ready workflow evidence"
+          desc="CDDG focuses on traceable workflow outputs: test metadata, GPS traces, OBD channel data, speed trace comparisons, validation flags, raw samples, and session records for downstream review."
           bullets={[
-            "Structured PDF with full test metadata and conditions",
-            "GPS trace map with speed overlay",
-            "All OBD channels with min / max / average summary",
-            "Data validation flags with explanatory annotations",
-            "Mass per km (g/km) calculations for RDE emission compliance",
-            "Raw CSV export for further post-processing",
+            "Session metadata and ambient conditions",
+            "GPS trace and speed guidance evidence",
+            "OBD channels with summary statistics",
+            "Validation flags and warnings",
+            "Raw CSV and structured session export paths",
+            "Designed for lab or authority review workflows",
           ]}
-          visual={<AuditReportVisual />}
+          visual={<AuditRecordVisual />}
         />
 
         {/* ── HOW IT WORKS ── */}
@@ -728,14 +728,14 @@ export default function CddgPageContent() {
             <div style={{ position: "relative" }}>
               <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#34D6B4", marginBottom: 16 }}>HOW IT WORKS</div>
               <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(26px,3.2vw,40px)", letterSpacing: "-0.025em", color: "#fff", marginBottom: 50 }}>
-                From plug-in to PDF in four steps
+                From plug-in to audit record in four steps
               </h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: 36 }}>
                 {[
                   { n: "01", title: "Connect", desc: "Pair your Bluetooth or WiFi OBD adapter. CDDG auto-detects the protocol and confirms vehicle communication." },
                   { n: "02", title: "Configure", desc: "Select your test protocol, enter vehicle details and ambient conditions. CDDG pre-validates readiness checks." },
                   { n: "03", title: "Drive", desc: "Follow the real-time speed guidance on screen. CDDG simultaneously monitors all channels and flags deviations." },
-                  { n: "04", title: "Export", desc: "When the test completes, export your audit-ready PDF and raw CSV data with one tap. Immediately shareable." },
+                  { n: "04", title: "Export", desc: "When the test completes, export review-ready session records and raw CSV data for downstream analysis." },
                 ].map(({ n, title, desc }) => (
                   <div key={n}>
                     <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: 50, lineHeight: 1, color: "transparent", WebkitTextStroke: "1.5px rgba(52,214,180,0.35)", marginBottom: 14 }}>{n}</div>
@@ -753,7 +753,7 @@ export default function CddgPageContent() {
           <div style={{ textAlign: "center", marginBottom: 38 }}>
             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#34D6B4", marginBottom: 12 }}>SUPPORTED STANDARDS</div>
             <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(24px,2.8vw,36px)", letterSpacing: "-0.02em", color: "#fff" }}>
-              Every major homologation protocol
+              Major vehicle test workflows in one place
             </h2>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
@@ -787,7 +787,7 @@ export default function CddgPageContent() {
               {
                 role: "R&D Engineers",
                 org: "OEMs & Tier-1 suppliers",
-                desc: "Pre-production type approval validation and powertrain calibration in the field — without a laptop in the cabin.",
+                desc: "Pre-production validation and powertrain calibration in the field - without a laptop in the cabin.",
               },
               {
                 role: "Certification Labs",
@@ -802,7 +802,7 @@ export default function CddgPageContent() {
               {
                 role: "Inspection Agencies",
                 org: "Government & regulatory bodies",
-                desc: "In-service conformity and RDE spot checks. Portable, rugged, and produces printable compliance evidence on the spot.",
+                desc: "In-service conformity and RDE spot checks. Portable, rugged, and focused on review-ready workflow evidence.",
               },
             ].map(({ role, org, desc }) => (
               <div
@@ -842,7 +842,7 @@ export default function CddgPageContent() {
                 Try CDDG before you commit
               </h2>
               <p style={{ fontSize: "clamp(15px,1.8vw,19px)", lineHeight: 1.6, color: "#6A9A90", maxWidth: "52ch", margin: "0 auto 38px" }}>
-                We offer limited-time demo trials for qualified organisations — enough time to run a full test cycle and evaluate fit for your workflow. Reach out to arrange access or to discuss an enterprise licence for your team.
+                We offer limited-time demo trials for qualified organisations - enough time to run a full test cycle and evaluate fit for your workflow. Reach out to arrange access or to discuss an enterprise licence for your team.
               </p>
               <div className="hero-ctas" style={{ justifyContent: "center" }}>
                 <button

@@ -136,11 +136,11 @@ export default function VizalyzePageContent() {
                 02 · MEASUREMENT DATA WORKBENCH
               </div>
               <h1 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(40px,5.8vw,76px)", lineHeight: 0.96, letterSpacing: "-0.03em", color: "#fff" }}>
-                MDF, TDMS and CAN,<br />
+                31+ formats, AI,<br />
                 <span style={{ color: "#B79BFF" }}>finally readable.</span>
               </h1>
               <p style={{ marginTop: 28, fontSize: "clamp(16px,1.9vw,20px)", lineHeight: 1.58, color: "#8A87A0", maxWidth: "46ch" }}>
-                Vizalyze is a desktop workbench to load, chart, compare and report on test and measurement data — from CSV and Excel to MDF, TDMS and CAN bus logs. A fast, focused alternative to heavier tools like DIAdem. Free to download.
+                Vizalyze is a local-first desktop app for MDF, TDMS, HDF5, CAN/LIN and 31+ formats. Ask Axy about your data, process signals, compare runs, apply standards templates, and batch-report without surrendering your raw files.
               </p>
               <div className="hero-ctas" style={{ marginTop: 36 }}>
                 <a
@@ -148,14 +148,14 @@ export default function VizalyzePageContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#6A42E8", color: "#fff", borderRadius: 999, fontWeight: 700, fontSize: 16 }}
-                >Download Vizalyze — free →</a>
+                >Download Vizalyze - free →</a>
                 <button
                   onClick={() => setContactOpen(true)}
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#B79BFF", border: "1px solid rgba(183,155,255,0.32)", borderRadius: 999, fontWeight: 600, fontSize: 16, cursor: "pointer", fontFamily: "inherit" }}
                 >Ask a question</button>
               </div>
               <div style={{ marginTop: 40, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-                {["MDF · MDF4", "TDMS", "CAN bus", "CSV · Excel"].map((label, i, arr) => (
+                {["31+ formats", "Axy AI", "CAN/LIN", "Local-first"].map((label, i, arr) => (
                   <span key={label} style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
                     <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: "#5A5470", letterSpacing: "0.04em" }}>{label}</span>
                     {i < arr.length - 1 && <span style={{ width: 3, height: 3, borderRadius: "50%", background: "#2A2440", display: "inline-block" }} />}
@@ -172,14 +172,14 @@ export default function VizalyzePageContent() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#B79BFF", marginBottom: 14 }}>WHY VIZALYZE</div>
             <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(26px,3vw,40px)", letterSpacing: "-0.025em", color: "#fff", maxWidth: "36ch", margin: "0 auto" }}>
-              A DIAdem alternative built for engineers who just want to see their data
+              A DIAdem alternative built for engineers who need the whole workflow
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(256px,1fr))", gap: 20 }}>
             {[
-              { icon: "📂", title: "Every format, one workbench", desc: "MDF, MDF4, TDMS, CAN bus logs, CSV and Excel — load them all without converting between tools." },
-              { icon: "📊", title: "Chart and compare fast", desc: "Overlay runs, zoom into signals, and build 3D surfaces without a scripting layer in the way." },
-              { icon: "📄", title: "Reports without the busywork", desc: "Build a report once and re-run it on new data. No more copy-pasting charts into slides." },
+              { icon: "📂", title: "31+ formats, one workbench", desc: "MDF/MF4, TDMS, HDF5, NetCDF, Parquet, MATLAB, CSV, Excel, CAN/LIN and specialist lab formats." },
+              { icon: "🤖", title: "Axy AI built in", desc: "Ask about channels, anomalies, filters, report recipes, or chart setup using hosted AI, your own key, or local models." },
+              { icon: "📄", title: "Reports without the busywork", desc: "Build repeatable report templates, batch-generate outputs, and share results without emailing raw data." },
             ].map(({ icon, title, desc }) => (
               <div
                 key={title}
@@ -197,53 +197,53 @@ export default function VizalyzePageContent() {
         {/* ── FEATURE 01: IMPORT ── */}
         <FeatureRow
           tag="FEATURE 01 · UNIVERSAL IMPORT"
-          title="MDF, TDMS and CAN bus logs — no conversion step"
-          desc="Point Vizalyze at your raw measurement files and start charting immediately. Channel names, units and metadata are read straight from the file, so nothing gets lost in translation."
+          title="31+ engineering, lab, and automotive formats - no conversion step"
+          desc="Point Vizalyze at raw measurement files and start working immediately. Smart import, content detection, channel metadata, units, and specialist packs keep more of the original context intact."
           bullets={[
             "MDF and MDF4 (ASAM) file support",
             "National Instruments TDMS support",
-            "CAN bus log decoding with DBC files",
-            "CSV and Excel import for quick datasets",
+            "HDF5, NetCDF, Parquet, MATLAB, CSV and Excel",
+            "Specialist lab, scientific, big-data and pharma format packs",
           ]}
           visual={<ScreenshotFrame file="axy-integration.png" alt="Vizalyze data import and channel integration view" />}
         />
 
         {/* ── FEATURE 02: COMPARE RUNS ── */}
         <FeatureRow
-          tag="FEATURE 02 · RUN COMPARISON"
-          title="Overlay runs to see what actually changed"
-          desc="Load multiple test runs side by side and overlay the same channel across them. Spot drift, regressions, or improvements at a glance instead of eyeballing separate exports."
+          tag="FEATURE 02 · AXY AI"
+          title="Ask your dataset what to look at next"
+          desc="Axy understands loaded channel names, statistics, and health findings. Use it to explain anomalies, suggest filters, draft summaries, or generate repeatable analysis steps."
           bullets={[
-            "Overlay unlimited runs on the same axis",
-            "Synchronized zoom and pan across charts",
-            "Per-run color coding and legends",
+            "Hosted AI, bring-your-own-key, or local model options",
+            "AI-assisted formulas, filters and chart setup",
+            "Raw files stay local unless you choose a cloud workflow",
           ]}
-          visual={<ScreenshotFrame file="compare-runs.png" alt="Vizalyze comparing multiple test runs on the same chart" />}
+          visual={<ScreenshotFrame file="axy-integration.png" alt="Vizalyze Axy AI analysis view" />}
           reverse
         />
 
         {/* ── FEATURE 03: 3D SURFACE ── */}
         <FeatureRow
-          tag="FEATURE 03 · 3D SURFACE CHARTS"
-          title="See three-dimensional relationships in your data"
-          desc="Map efficiency maps, torque curves, or any three-variable relationship onto an interactive 3D surface — rotate, zoom and slice without exporting to a separate plotting tool."
+          tag="FEATURE 03 · RUN COMPARISON"
+          title="Overlay runs to see what actually changed"
+          desc="Load multiple test runs side by side, align them, overlay channels, and inspect deltas. It is built for spotting drift, regressions, and calibration changes without juggling exports."
           bullets={[
-            "Interactive rotate, pan and zoom",
-            "Color-mapped surfaces for a third variable",
-            "Export as image for reports",
+            "Multiple alignment modes",
+            "Synchronized zoom and pan across charts",
+            "Per-channel statistics, deltas and lineage",
           ]}
-          visual={<ScreenshotFrame file="chart-3d-surface.png" alt="Vizalyze 3D surface chart of measurement data" />}
+          visual={<ScreenshotFrame file="compare-runs.png" alt="Vizalyze comparing multiple test runs on the same chart" />}
         />
 
         {/* ── FEATURE 04: FFT / SIGNAL ANALYSIS ── */}
         <FeatureRow
           tag="FEATURE 04 · SIGNAL ANALYSIS"
           title="FFT and signal analysis built in"
-          desc="Run frequency-domain analysis directly on imported signals — find noise sources, resonances and dominant frequencies without exporting to MATLAB or Python first."
+          desc="Run frequency-domain and time-domain analysis directly on imported signals - find noise sources, resonances, trends, and derived channels without exporting to MATLAB or Python first."
           bullets={[
-            "FFT with configurable windowing",
+            "FFT, PSD and configurable windowing",
+            "Filtering, smoothing, curve fitting and integration",
             "Time and frequency domain side by side",
-            "Peak detection on frequency spectra",
           ]}
           visual={<ScreenshotFrame file="signal-fft.png" alt="Vizalyze FFT signal analysis view" />}
           reverse
@@ -251,13 +251,13 @@ export default function VizalyzePageContent() {
 
         {/* ── FEATURE 05: DATA HEALTH ── */}
         <FeatureRow
-          tag="FEATURE 05 · DATA HEALTH CHECKS"
+          tag="FEATURE 05 · DATA HEALTH & LINEAGE"
           title="Catch bad data before it wastes an afternoon"
-          desc="Vizalyze flags gaps, dropouts and out-of-range values across channels as soon as a file loads — so you know if a run is usable before you build an analysis on top of it."
+          desc="Vizalyze flags gaps, dropouts and out-of-range values, then tracks load, transform, filter, merge and export steps so results stay reproducible."
           bullets={[
             "Automatic gap and dropout detection",
             "Per-channel range and sanity checks",
-            "Quick visual health summary on load",
+            "Data lineage for transformations and derived datasets",
           ]}
           visual={<ScreenshotFrame file="data-health.png" alt="Vizalyze data health check summary" />}
         />
@@ -266,11 +266,11 @@ export default function VizalyzePageContent() {
         <FeatureRow
           tag="FEATURE 06 · REPORT BUILDER"
           title="Build the report once, re-run it on every new dataset"
-          desc="Lay out charts, tables and annotations in a report template, then point it at new test data and regenerate — no rebuilding slides for every test run."
+          desc="Lay out charts, tables and annotations in a report template, then point it at new test data and regenerate. Pro workflows can batch-generate PPTX/PDF outputs and share results securely."
           bullets={[
             "Reusable report templates",
             "Mixed charts, tables and text in one layout",
-            "One-click regeneration on new data",
+            "Batch reporting and secure report sharing",
           ]}
           visual={<ScreenshotFrame file="report-builder.png" alt="Vizalyze report builder view" />}
           reverse
@@ -286,10 +286,10 @@ export default function VizalyzePageContent() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }}>
             {[
-              { role: "Automotive test engineers", org: "OEMs & suppliers", desc: "Chart CAN bus and MDF logs from vehicle testing without switching between three different tools." },
-              { role: "Test & measurement teams", org: "Aerospace & industrial", desc: "Load TDMS files from NI hardware straight into charts and comparisons." },
-              { role: "R&D and calibration", org: "Powertrain & controls", desc: "Compare calibration runs and build efficiency maps with 3D surface charts." },
-              { role: "Independent engineers", org: "Consultants & researchers", desc: "A lighter, faster alternative to enterprise tools like DIAdem for day-to-day analysis." },
+              { role: "Automotive test engineers", org: "OEMs & suppliers", desc: "Decode CAN/LIN in MDF/MF4 files, apply EV signal presets, compare runs, and build repeatable reports." },
+              { role: "Test & measurement teams", org: "Aerospace & industrial", desc: "Load TDMS and other instrument files into charts, signal processing, live monitoring, and batch reports." },
+              { role: "R&D and calibration", org: "Powertrain & controls", desc: "Compare calibration runs, analyze signals, build 3D surfaces, and keep every transformation traceable." },
+              { role: "Labs and specialists", org: "Pharma, scientific & big data", desc: "Use extension packs for lab, scientific, pharma, and columnar data formats while keeping raw files local." },
             ].map(({ role, org, desc }) => (
               <div
                 key={role}
@@ -315,7 +315,7 @@ export default function VizalyzePageContent() {
                 Download Vizalyze free
               </h2>
               <p style={{ fontSize: "clamp(15px,1.8vw,19px)", lineHeight: 1.6, color: "#8A87A0", maxWidth: "52ch", margin: "0 auto 38px" }}>
-                No credit card required. Load your first MDF, TDMS or CAN log and start charting in minutes.
+                No credit card required. Load your first MDF, TDMS, CAN/LIN, CSV, Excel, or specialist format and start analyzing in minutes.
               </p>
               <div className="hero-ctas" style={{ justifyContent: "center" }}>
                 <a
@@ -323,7 +323,7 @@ export default function VizalyzePageContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "16px 32px", background: "#6A42E8", color: "#fff", borderRadius: 999, fontWeight: 700, fontSize: 17 }}
-                >Download Vizalyze — free →</a>
+                >Download Vizalyze - free →</a>
               </div>
             </div>
           </div>

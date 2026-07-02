@@ -10,7 +10,7 @@ import ContactModal from "@/components/ContactModal";
 function TranscriptVisual() {
   const lines = [
     { speaker: "Speaker 1", text: "So the main thing I want to cover today is the Q3 rollout timeline.", delay: "0s" },
-    { speaker: "Speaker 2", text: "Sounds good — can we start with the blockers on the API side?", delay: "0.4s" },
+    { speaker: "Speaker 2", text: "Sounds good - can we start with the blockers on the API side?", delay: "0.4s" },
     { speaker: "Speaker 1", text: "Sure. We're waiting on the auth changes before we can ship staging.", delay: "0.8s" },
     { speaker: "Speaker 2", text: "Got it. I'll follow up with the platform team this afternoon.", delay: "1.2s" },
   ];
@@ -56,7 +56,7 @@ function TranscriptVisual() {
 
 function InterviewCopilotVisual() {
   const steps = [
-    { k: "SITUATION", v: "Set the scene — team, project, stakes." },
+    { k: "SITUATION", v: "Set the scene - team, project, stakes." },
     { k: "TASK", v: "What were you responsible for?" },
     { k: "ACTION", v: "The specific steps you took." },
     { k: "RESULT", v: "Outcome, ideally with a number." },
@@ -233,7 +233,7 @@ export default function ScoobsLivePageContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 700, fontSize: 16 }}
-                >Try Scoobs Live — free →</a>
+                >Try Scoobs Live - free →</a>
                 <button
                   onClick={() => setContactOpen(true)}
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#84E15D", border: "1px solid rgba(132,225,93,0.32)", borderRadius: 999, fontWeight: 600, fontSize: 16, cursor: "pointer", fontFamily: "inherit" }}
@@ -281,9 +281,9 @@ export default function ScoobsLivePageContent() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(256px,1fr))", gap: 20 }}>
             {[
-              { icon: "🎙️", title: "Live, not after the fact", desc: "Captions and transcripts appear as people talk — no waiting for a recording to process." },
+              { icon: "🎙️", title: "Live, not after the fact", desc: "Captions and transcripts appear as people talk - no waiting for a recording to process." },
               { icon: "🌍", title: "70+ languages, one app", desc: "Run a meeting in Spanish, review it in English. Scoobs Live handles the switch automatically." },
-              { icon: "🎯", title: "STAR-method interview coaching", desc: "Live prompts structure your answers around Situation, Task, Action, Result — without sounding scripted." },
+              { icon: "🎯", title: "STAR-method interview coaching", desc: "Live prompts structure your answers around Situation, Task, Action, Result - without sounding scripted." },
             ].map(({ icon, title, desc }) => (
               <div
                 key={title}
@@ -302,7 +302,7 @@ export default function ScoobsLivePageContent() {
         <FeatureRow
           tag="FEATURE 01 · LIVE TRANSCRIPTION"
           title="Real-time captions and transcripts for every meeting"
-          desc="Scoobs Live listens alongside you and turns speech into text as it happens — with automatic speaker identification, so you always know who said what."
+          desc="Scoobs Live listens alongside you and turns speech into text as it happens - with automatic speaker identification, so you always know who said what."
           bullets={[
             "Real-time live captions",
             "Automatic speaker identification",
@@ -316,12 +316,12 @@ export default function ScoobsLivePageContent() {
         <FeatureRow
           tag="FEATURE 02 · AI INTERVIEW COPILOT"
           title="An interview coach that structures your answers live"
-          desc="Facing a behavioral question? Scoobs Live's copilot prompts you through the STAR method in real time — Situation, Task, Action, Result — so your answers land with substance, not filler."
+          desc="Facing a behavioral question? Scoobs Live's copilot prompts you through the STAR method in real time - Situation, Task, Action, Result - so your answers land with substance, not filler."
           bullets={[
             "STAR-method structure prompts, live",
             "Works for job interviews and practice sessions",
             "Helps you avoid rambling or losing the thread",
-            "Private — coaching cues are visible only to you",
+            "Private - coaching cues are visible only to you",
           ]}
           visual={<InterviewCopilotVisual />}
           reverse
@@ -345,13 +345,13 @@ export default function ScoobsLivePageContent() {
           <div style={{ marginBottom: 40 }}>
             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: "0.08em", color: "#84E15D", marginBottom: 14 }}>WHO USES SCOOBS LIVE</div>
             <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "clamp(26px,3vw,38px)", letterSpacing: "-0.025em", color: "#fff" }}>
-              Built for anyone who needs a live record — or a live coach
+              Built for anyone who needs a live record - or a live coach
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }}>
             {[
               { role: "Job seekers", org: "Interview prep", desc: "Practice behavioral questions with live STAR-method structure, then walk into the real interview prepared." },
-              { role: "Remote teams", org: "Meetings & standups", desc: "Never lose a decision or action item — every meeting gets a searchable, exportable transcript." },
+              { role: "Remote teams", org: "Meetings & standups", desc: "Never lose a decision or action item - every meeting gets a searchable, exportable transcript." },
               { role: "Recruiters", org: "Screening calls", desc: "Focus on the conversation instead of note-taking; review the transcript afterward." },
               { role: "Students & researchers", org: "Interviews & lectures", desc: "Transcribe interviews and lectures across languages without manual note-taking." },
             ].map(({ role, org, desc }) => (
@@ -394,7 +394,7 @@ export default function ScoobsLivePageContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "16px 32px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 700, fontSize: 17 }}
-                >Try Scoobs Live — free →</a>
+                >Try Scoobs Live - free →</a>
               </div>
             </div>
           </div>

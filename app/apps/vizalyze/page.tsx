@@ -2,15 +2,20 @@ import type { Metadata } from "next";
 import VizalyzePageContent from "./VizalyzePageContent";
 
 export const metadata: Metadata = {
-  title: "Vizalyze — MDF, TDMS & CAN Bus Viewer for Engineers",
+  title: "Vizalyze - Professional Test Data Analysis for Engineers",
   description:
-    "Vizalyze is a desktop workbench to load, chart, compare and report on test and measurement data — from CSV and Excel to MDF, TDMS and CAN bus logs. A fast DIAdem alternative. Free to download.",
+    "Vizalyze analyzes MDF, TDMS, HDF5, CAN/LIN and 31+ formats with Axy AI, signal processing, standards templates, batch reporting, live monitoring, and local-first data handling. Free to start.",
   keywords: [
     "Vizalyze",
     "MDF file viewer",
     "TDMS viewer",
     "DIAdem alternative",
     "CAN bus analysis tool",
+    "CAN LIN analysis",
+    "Axy AI",
+    "batch reporting software",
+    "live test monitoring",
+    "engineering standards templates",
     "measurement data analysis software",
     "test data visualization software",
     "engineering data viewer",
@@ -22,9 +27,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dimeapps.com/apps/vizalyze" },
   openGraph: {
-    title: "Vizalyze — MDF, TDMS & CAN Bus Viewer for Engineers",
+    title: "Vizalyze - Professional Test Data Analysis for Engineers",
     description:
-      "Load, chart, compare and report on test and measurement data — from CSV and Excel to MDF, TDMS and CAN bus logs.",
+      "Analyze 31+ engineering data formats with Axy AI, signal processing, CAN/LIN decoding, batch reporting, and local-first workflows.",
     url: "https://www.dimeapps.com/apps/vizalyze",
     siteName: "Dimeapps",
     type: "website",
@@ -32,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vizalyze — MDF, TDMS & CAN Bus Viewer for Engineers",
+    title: "Vizalyze - Professional Test Data Analysis for Engineers",
     description:
-      "Load, chart, compare and report on test and measurement data — from CSV and Excel to MDF, TDMS and CAN bus logs.",
+      "Analyze 31+ formats with Axy AI, signal processing, CAN/LIN decoding, batch reporting, and local-first workflows.",
     creator: "@dimeapps",
   },
 };
@@ -46,7 +51,7 @@ const jsonLd = {
   applicationCategory: "BusinessApplication",
   url: "https://vizalyze.app",
   description:
-    "A desktop workbench to load, chart, compare and report on test and measurement data — from CSV and Excel to MDF, TDMS and CAN logs.",
+    "A local-first desktop workbench for MDF, TDMS, HDF5, CAN/LIN and 31+ formats with Axy AI, signal processing, standards templates, batch reporting, live monitoring, and encrypted sync.",
   author: { "@type": "Organization", name: "Dimeapps", url: "https://www.dimeapps.com" },
   offers: {
     "@type": "Offer",
@@ -57,12 +62,17 @@ const jsonLd = {
   featureList: [
     "MDF and MDF4 file support",
     "TDMS file support",
-    "CAN bus log decoding",
-    "CSV and Excel import",
+    "HDF5, NetCDF, Parquet, MATLAB, CSV, Excel and specialist format packs",
+    "CAN/LIN bus decoding with DBC, ARXML, KCD and SYM databases",
+    "Axy AI with hosted, bring-your-own-key, and local model options",
     "3D surface charting",
-    "FFT signal analysis",
+    "FFT, PSD, filtering, smoothing, curve fitting and signal analysis",
     "Run comparison",
-    "Automated report builder",
+    "Standards templates and KPI checks",
+    "Batch PPTX/PDF reporting",
+    "Live monitoring and SPC",
+    "Encrypted cloud sync and report sharing",
+    "Data lineage and reproducible workflows",
   ],
 };
 

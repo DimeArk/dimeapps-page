@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ScoobsLivePageContent from "./ScoobsLivePageContent";
 
 export const metadata: Metadata = {
-  title: "Scoobs Live — AI Meeting Transcription & Interview Copilot",
+  title: "Scoobs Live - AI Meeting Transcription & Interview Copilot",
   description:
     "Scoobs Live gives you real-time meeting transcription in 70+ languages and an AI interview copilot with STAR-method coaching. Free to start, no signup needed.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.dimeapps.com/apps/scoobs-live" },
   openGraph: {
-    title: "Scoobs Live — AI Meeting Transcription & Interview Copilot",
+    title: "Scoobs Live - AI Meeting Transcription & Interview Copilot",
     description:
       "Real-time meeting transcription in 70+ languages, plus an AI interview copilot with STAR-method coaching. Free to start.",
     url: "https://www.dimeapps.com/apps/scoobs-live",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scoobs Live — AI Meeting Transcription & Interview Copilot",
+    title: "Scoobs Live - AI Meeting Transcription & Interview Copilot",
     description:
       "Real-time meeting transcription in 70+ languages, plus an AI interview copilot with STAR-method coaching.",
     creator: "@dimeapps",

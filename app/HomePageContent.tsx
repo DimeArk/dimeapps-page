@@ -82,10 +82,10 @@ export default function HomePageContent() {
             Small, sharp apps that do one thing well.
           </h1>
           <p style={{ marginTop: 30, fontSize: "clamp(18px,2.2vw,22px)", lineHeight: 1.5, color: "#9AA1A9", maxWidth: "52ch" }}>
-            Live meeting transcription, engineering data analysis, and homologation-grade vehicle testing — each free to start, built to respect your data.
+            Live meeting transcription, engineering data analysis, and vehicle test workflow tools - each free to start, built to respect your data.
           </p>
           <div className="hero-ctas" style={{ marginTop: 40 }}>
-            <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Try Scoobs Live — free →</a>
+            <a href="https://scoobslive.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "#ED7D31", color: "#fff", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Try Scoobs Live - free →</a>
             <a href="https://vizalyze.app" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "14px 26px", background: "transparent", color: "#E7EAEE", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, fontWeight: 600, fontSize: 16 }}>Download Vizalyze →</a>
           </div>
           <div style={{ marginTop: 44, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
@@ -116,7 +116,7 @@ export default function HomePageContent() {
               <Image src="/assets/mascots/scoobs-fly.png" alt="" width={118} height={118} style={{ position: "absolute", top: 18, right: 14, width: 118, height: "auto", transform: "rotate(4deg)", filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.4))" }} />
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.08em", color: "#84E15D" }}>01 · TRANSCRIPTION</div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", marginTop: "auto" }}>Scoobs Live</h3>
-              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#A8AEB6" }}>Real-time meeting transcription and an AI interview copilot with STAR-method coaching — in 70+ languages.</p>
+              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#A8AEB6" }}>Real-time meeting transcription and an AI interview copilot with STAR-method coaching - in 70+ languages.</p>
               <div style={{ marginTop: 22, display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #2A2A2E", borderRadius: 999, color: "#C9CDD3" }}>Live transcripts</span>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #2A2A2E", borderRadius: 999, color: "#C9CDD3" }}>Interview AI</span>
@@ -137,9 +137,9 @@ export default function HomePageContent() {
               <AnimatedLogo size={62} />
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.08em", color: "#B79BFF" }}>02 · DATA ANALYSIS</div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", marginTop: "auto" }}>Vizalyze</h3>
-              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#9499A8" }}>A desktop workbench to load, chart, compare and report on test &amp; measurement data — from CSV and Excel to MDF, TDMS and CAN logs.</p>
+              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#9499A8" }}>A local-first desktop workbench for 31+ data formats, CAN/LIN decoding, Axy AI, signal processing, comparisons, and batch reports.</p>
               <div style={{ marginTop: 22, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>Charts &amp; reports</span>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>AI &amp; reports</span>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999, color: "#C4B5F5" }}>CAN · MDF · CSV</span>
               </div>
               <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
@@ -157,10 +157,10 @@ export default function HomePageContent() {
               <Image src="/assets/cddg_logo.png" alt="CDDG logo" width={96} height={96} style={{ position: "absolute", top: 14, right: 14, width: 96, height: 96, objectFit: "contain", filter: "drop-shadow(0 6px 18px rgba(40,210,180,0.4))" }} />
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, letterSpacing: "0.08em", color: "#34D6B4" }}>03 · AUTOMOTIVE</div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", marginTop: "auto" }}>CDDG</h3>
-              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#9BA7AD" }}>Homologation-grade vehicle test workflows for Android — drive cycles, RDE, EV/hybrid, OBD logging and audit-ready reports.</p>
+              <p style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.5, color: "#9BA7AD" }}>Android vehicle test workflows for drive cycles, RDE setup, EV/hybrid work, OBD/GPS logging, validation, replay, and audit exports.</p>
               <div style={{ marginTop: 22, display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Dyno · RDE · EV</span>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Audit reports</span>
+                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, padding: "5px 10px", border: "1px solid #1E2A33", borderRadius: 999, color: "#BFC9CE" }}>Audit records</span>
               </div>
               <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
                 <button
@@ -190,7 +190,7 @@ export default function HomePageContent() {
                 <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "clamp(28px,3.5vw,44px)", letterSpacing: "-0.025em", lineHeight: 1.05 }}>
                   Tools should be <span style={{ color: "#ED7D31" }}>honest</span>, fast, and respect the people using them.
                 </h2>
-                <p style={{ marginTop: 18, fontSize: 15, lineHeight: 1.6, color: "#9AA1A9", maxWidth: "36ch" }}>Three principles behind every Dimeapps product — no exceptions, no asterisks.</p>
+                <p style={{ marginTop: 18, fontSize: 15, lineHeight: 1.6, color: "#9AA1A9", maxWidth: "36ch" }}>Three principles behind every Dimeapps product - no exceptions, no asterisks.</p>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
