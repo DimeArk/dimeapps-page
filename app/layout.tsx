@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     "Dimeapps is an independent studio building focused tools - from live meeting transcription (Scoobs Live) to professional measurement-data analysis (Vizalyze) to Android vehicle test workflows (CDDG).",
   metadataBase: new URL("https://www.dimeapps.com"),
   alternates: { canonical: "https://www.dimeapps.com" },
+  icons: {
+    icon: [{ url: "/assets/dimeapps_logo.svg", type: "image/svg+xml" }],
+    shortcut: "/assets/dimeapps_logo.svg",
+    apple: "/assets/dimeapps_logo.svg",
+  },
   keywords: ["Dimeapps", "Scoobs Live", "Vizalyze", "CDDG", "indie apps", "productivity apps", "meeting transcription", "data analysis"],
   authors: [{ name: "Dimeapps" }],
   creator: "Dimeapps",
