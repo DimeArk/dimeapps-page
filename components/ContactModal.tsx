@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -17,8 +18,11 @@ export default function ContactModal({ open, onClose }: { open: boolean; onClose
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (res.ok) { setStatus("sent"); setForm({ name: "", email: "", message: "" }); }
-      else setStatus("error");
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+        trackEvent("generate_lead", { form: "contact" });
+      } else setStatus("error");
     } catch { setStatus("error"); }
   };
 
