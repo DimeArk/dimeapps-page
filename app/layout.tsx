@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import OutboundLinkTracker from "@/components/OutboundLinkTracker";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", display: "swap" });
@@ -131,7 +132,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
       </head>
-      <body>{children}</body>
+      <body>
+        {GA_ID && <OutboundLinkTracker />}
+        {children}
+      </body>
     </html>
   );
 }
