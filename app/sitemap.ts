@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.dimeapps.com/billing",
+      lastModified: new Date("2026-11-01"),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    {
       url: "https://www.dimeapps.com/apps/vizalyze",
       lastModified: new Date("2026-07-01"),
       changeFrequency: "monthly",
