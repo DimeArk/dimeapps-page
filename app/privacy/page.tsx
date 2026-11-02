@@ -47,6 +47,13 @@ const SECTIONS: { title: string; body: React.ReactNode[] }[] = [
     ],
   },
   {
+    title: "How we protect it",
+    body: [
+      "Our websites and app services are served only over encrypted HTTPS connections. Card details are entered on Stripe's own payment pages and never reach our servers. Account and licence data is held with our hosting providers with access restricted to the people who run Dimeapps, and passwords are stored by our authentication provider as salted hashes, never in plain text.",
+      "No system is perfectly secure; if we ever learn of a breach that affects your personal information, we will tell you and the relevant authorities as the law requires.",
+    ],
+  },
+  {
     title: "How long we keep it",
     body: [
       "We keep account information while your account is active, and billing records for as long as tax and accounting rules require. Support emails are kept while they are useful for helping you, then deleted.",
