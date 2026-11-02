@@ -260,6 +260,7 @@ export default function HomePageContent() {
                   <button onClick={() => setContactOpen(true)} className="footer-link" style={{ background: "none", border: "none", cursor: "pointer", color: "inherit", fontSize: 15, fontWeight: 500, fontFamily: "inherit", textAlign: "left", padding: 0 }}>Contact us</button>
                   <a href="mailto:support@dimeapps.com" className="footer-link">support@dimeapps.com</a>
                   <a href="/billing" className="footer-link">Billing &amp; charges</a>
+                  <a href="/privacy" className="footer-link">Privacy</a>
                 </div>
               </div>
             </div>

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const esc = (v: unknown) =>
+  String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] as string);
+
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json();
@@ -21,12 +24,13 @@ export async function POST(req: NextRequest) {
           "Accept": "application/json",
         },
         body: JSON.stringify({
-          sender: { name: "Dime Apps", email: "apps.dime@gmail.com" },
+          // Must be a Brevo-authenticated domain: gmail.com senders relayed through Brevo fail DMARC.
+          sender: { name: "Dimeapps website", email: process.env.CONTACT_FROM_EMAIL || "hello@vizalyze.app" },
           to: [{ email: TO_EMAIL }],
           replyTo: { email, name },
           subject: `New message from ${name}`,
           textContent: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-          htmlContent: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><br><p>${message.replace(/\n/g, "<br>")}</p>`,
+          htmlContent: `<p><strong>Name:</strong> ${esc(name)}</p><p><strong>Email:</strong> ${esc(email)}</p><br><p>${esc(message).replace(/\n/g, "<br>")}</p>`,
         }),
       });
 

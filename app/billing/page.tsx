@@ -29,7 +29,7 @@ const ROWS = [
     what: "AI meeting transcription and interview copilot",
     statement: ["DIMEAPPS SCOOBSLIVE", "DIMEAPPS"],
     manage: { label: "scoobslive.com", href: "https://scoobslive.com" },
-    policies: [],
+    policies: [{ label: "Privacy", href: "/privacy" }],
     email: "support@dimeapps.com",
   },
 ];
